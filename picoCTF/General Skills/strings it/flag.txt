@@ -1,0 +1,5 @@
+flag: picoCTF{5tRIng5_1T_827aee91}
+
+HELP: Open terminal
+	Step 1: strings [filename] 
+	Step 2: strings strings | grep -oE "picoCTF{.*}" --color=none

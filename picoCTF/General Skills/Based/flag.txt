@@ -1,0 +1,37 @@
+flag: picoCTF{learning_about_converting_values_00a975ff}
+
+
+## CODE to convert :
+
+import binascii
+
+def hex2ascii(hex_str):
+    return bytes.fromhex(hex_str).decode('utf-8')
+
+def bin2ascii(bin_str):
+    n = int(bin_str, 2)
+    return n.to_bytes((n.bit_length() + 7) // 8, 'big').decode()
+
+def oct2ascii(oct_str):
+    return chr(int(oct_str, 8))
+
+def int2ascii(int_str):
+    return chr(int(int_str))
+
+while True:
+    str_format = input('please input format. {bin|hex|oct}\n')
+    str_list = input('please input char list.\n')
+    str_arr = str_list.split()
+    output = ""
+    
+    for s in str_arr:
+        if str_format == 'bin':
+            output += bin2ascii(s)
+        elif str_format == 'hex':
+            output += hex2ascii(s)
+        elif str_format == 'oct':
+            output += oct2ascii(s)
+        else:
+            print('unknown format.')
+            break
+    print(output)

@@ -1,0 +1,7 @@
+flag: picoCTF{4p0110_1n_7h3_h0us3_6008014f}
+
+Note: run file ende.py in terminal   
+1. python ende.py -h
+2. python ende.py -d flag.txt.en
+3. enter password from pw.txt file
+## So, you can see flag 
